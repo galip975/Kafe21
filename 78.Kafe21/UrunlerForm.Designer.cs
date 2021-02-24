@@ -29,7 +29,7 @@ namespace _78.Kafe21
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label1 = new System.Windows.Forms.Label();
             this.txtUrunAd = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -91,6 +91,7 @@ namespace _78.Kafe21
             // dgvUrunler
             // 
             this.dgvUrunler.AllowUserToAddRows = false;
+            this.dgvUrunler.AllowUserToDeleteRows = false;
             this.dgvUrunler.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
@@ -105,12 +106,13 @@ namespace _78.Kafe21
             this.dgvUrunler.Name = "dgvUrunler";
             this.dgvUrunler.ReadOnly = true;
             this.dgvUrunler.RowHeadersVisible = false;
-            dataGridViewCellStyle2.Format = "0.00₺";
-            this.dgvUrunler.RowsDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle1.Format = "0.00₺";
+            this.dgvUrunler.RowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvUrunler.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvUrunler.Size = new System.Drawing.Size(500, 290);
             this.dgvUrunler.TabIndex = 4;
             this.dgvUrunler.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvUrunler_CellMouseDoubleClick);
+            this.dgvUrunler.KeyDown += new System.Windows.Forms.KeyEventHandler(this.dgvUrunler_KeyDown);
             // 
             // Column1
             // 

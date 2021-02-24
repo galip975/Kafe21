@@ -20,6 +20,6 @@ namespace Kafe21.Data
             return UrunAd + "  ₺" + BirimFiyat.ToString("N");
         }
 
-        public virtual ICollection<SiparisDetay> SiparisDetaylar { get; set; }
+        public virtual ICollection<SiparisDetay> SiparisDetaylar { get; set; } = new HashSet<SiparisDetay>();
     }
 }

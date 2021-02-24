@@ -19,7 +19,7 @@ namespace _78.Kafe21
         {
             InitializeComponent();
             this.kafeVeri = kafeVeri; //classtakine this ile erişilir localdekine kendi ismiyle
-            dgvSiparisler.DataSource = kafeVeri.GecmisSiparisler;
+            dgvSiparisler.DataSource = kafeVeri.Siparisler.Where(x=>x.Durum != SiparisDurum.Aktif).ToList();
         }
         private void dgvSiparisDetaylar_SelectionChanged(object sender, EventArgs e)
         {
@@ -30,7 +30,7 @@ namespace _78.Kafe21
             }
             DataGridViewRow satir = dgvSiparisler.SelectedRows[0]; //seçili satırı al
             Siparis siparis = (Siparis)satir.DataBoundItem;//satırdaki bağlı nesneyi al(datasource'a attığımız için item ı alabildik.)
-            dgvSiparisDetaylar.DataSource = siparis.SiparisDetaylar;
+            dgvSiparisDetaylar.DataSource = siparis.SiparisDetaylar.ToList();
         }
 
         private void GecmisSiparislerForm_Load(object sender, EventArgs e)

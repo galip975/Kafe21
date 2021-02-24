@@ -107,7 +107,6 @@ namespace _78.Kafe21
             this.dgvSiparisDetaylar.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvSiparisDetaylar.Size = new System.Drawing.Size(879, 273);
             this.dgvSiparisDetaylar.TabIndex = 1;
-            this.dgvSiparisDetaylar.SelectionChanged += new System.EventHandler(this.dgvSiparisDetaylar_SelectionChanged);
             // 
             // label1
             // 
